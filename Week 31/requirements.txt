@@ -1,11 +1,8 @@
 pandas
 numpy
-
 matplotlib
 tqdm
 wordcloud
-
 scikit-learn
-
 tensorflow
-keras
+spacy[apple]
