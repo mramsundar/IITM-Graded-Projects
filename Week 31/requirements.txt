@@ -3,6 +3,7 @@ numpy
 
 matplotlib
 tqdm
+wordcloud
 
 scikit-learn
 
