@@ -7,3 +7,4 @@ scikit-learn
 tensorflow==2.15.0
 tensorflow-metal==1.1.0
 spacy[apple]==3.7.5
+nltk
