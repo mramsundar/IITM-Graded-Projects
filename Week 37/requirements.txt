@@ -1,0 +1,14 @@
+pandas
+numpy
+matplotlib
+tqdm
+wordcloud==1.9.3
+scikit-learn
+tensorflow==2.15.0
+tensorflow-metal==1.1.0
+tensorflow-datasets
+spacy[apple]==3.7.5
+nltk
+transformers==4.44.2
+torch
+torchdata
