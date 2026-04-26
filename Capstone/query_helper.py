@@ -15,7 +15,7 @@ def create_connection(db_file):
 
 def get_connection():
     """Get connection to the hospital database"""
-    root_dir = os.path.dirname(os.getcwd())
+    root_dir = os.path.dirname(os.path.dirname(os.getcwd()))
     db_path = os.path.join(root_dir, "Database", "hospital.db")
     return create_connection(db_path)
 

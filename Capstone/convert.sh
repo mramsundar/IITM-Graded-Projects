@@ -5,7 +5,7 @@ PDF_ROOT="./Notebook PDFs"
 # Clean out previous PDFs for a fresh start
 rm -rf "$PDF_ROOT"
 
-find . -type f -name "*.ipynb" | while read -r file; do
+find ./Notebooks -type f -name "*.ipynb" | while read -r file; do
   # Extract the file path without the .ipynb extension
   base="${file%.ipynb}"
   filename="$(basename "$base")"
