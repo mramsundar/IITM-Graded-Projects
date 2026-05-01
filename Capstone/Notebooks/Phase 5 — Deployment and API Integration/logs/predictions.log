@@ -87,3 +87,14 @@
 2026-05-01 20:37:31,488  INFO      PREDICTION | id=051cf458-afe7-4c77-8ccc-90a72b1dec5c | model=claim_outcome_model v1.0 | ts=2026-05-01T15:07:31.488289+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030
 2026-05-01 20:37:38,286  INFO      PREDICTION | id=81f44870-7578-4ffd-9b34-27aea9969a71 | model=claim_outcome_model v1.0 | ts=2026-05-01T15:07:38.286455+00:00 | hash=50207bd27bb8974ea3b9c29940ccd83653c828973ee301c4e2eae30e1e03926b | label=Pending | score=0.7683
 2026-05-01 20:37:42,041  INFO      PREDICTION | id=cb641b72-7b19-40ff-bf2c-a6fa5c5ca5c8 | model=claim_outcome_model v1.0 | ts=2026-05-01T15:07:42.041129+00:00 | hash=5ac97ba7b4dfd1718b4d488b1bc63009ee58c8e4c2a2b5dc2b68424751e00019 | label=Paid | score=0.6291
+2026-05-01 20:51:52,206  INFO      Models unloaded.
+2026-05-01 21:00:57,118  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 21:00:58,884  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 21:00:58,898  INFO      Loading feature schemas for validation...
+2026-05-01 21:00:58,898  INFO      Loading categorical metadata from raw CSVs...
+2026-05-01 21:00:58,916  INFO      Metadata loaded: {'city': 6, 'insurance_provider': 4, 'department': 6, 'visit_type': 3}
+2026-05-01 21:00:58,916  INFO      Both models loaded and ready.
+2026-05-01 21:01:02,898  INFO      PREDICTION | id=0f169498-4b49-4c88-a551-9dfa4d274e66 | model=patient_risk_model v1.0 | ts=2026-05-01T15:31:02.898488+00:00 | hash=aecbd702a18fcbdac8a02551be153304a03d18c1c5083036f7f95d96b14eb32e | label=Medium | score=0.3521
+2026-05-01 21:01:04,001  INFO      PREDICTION | id=a3654b8d-9560-4cae-ae9f-6c13109cf565 | model=claim_outcome_model v1.0 | ts=2026-05-01T15:31:04.001613+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030
+2026-05-01 21:03:35,201  INFO      PREDICTION | id=301a0798-a98c-4ad3-83c0-bf7498277ea7 | model=patient_risk_model v1.0 | ts=2026-05-01T15:33:35.201891+00:00 | hash=aecbd702a18fcbdac8a02551be153304a03d18c1c5083036f7f95d96b14eb32e | label=Medium | score=0.3521
+2026-05-01 21:03:37,188  INFO      PREDICTION | id=0b2893fc-a67c-450d-bc65-1a3ad62e6e9e | model=claim_outcome_model v1.0 | ts=2026-05-01T15:33:37.188172+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030

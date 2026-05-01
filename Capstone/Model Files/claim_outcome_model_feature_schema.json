@@ -5,7 +5,11 @@
         {
             "name": "age",
             "type": "int8",
-            "required": true
+            "required": true,
+            "constraints": {
+                "min_value": 0,
+                "max_value": 120
+            }
         },
         {
             "name": "gender",
@@ -21,12 +25,30 @@
         {
             "name": "city",
             "type": "category",
-            "required": true
+            "required": true,
+            "constraints": {
+                "allowed_values": [
+                    "Bangalore",
+                    "Chennai",
+                    "Delhi",
+                    "Hyderabad",
+                    "Mumbai",
+                    "Pune"
+                ]
+            }
         },
         {
             "name": "insurance_provider",
             "type": "category",
-            "required": true
+            "required": true,
+            "constraints": {
+                "allowed_values": [
+                    "CareOne",
+                    "HealthPlus",
+                    "MediCareX",
+                    "SecureLife"
+                ]
+            }
         },
         {
             "name": "chronic_flag",
@@ -42,24 +64,46 @@
         {
             "name": "department",
             "type": "category",
-            "required": true
+            "required": true,
+            "constraints": {
+                "allowed_values": [
+                    "Cardiology",
+                    "ER",
+                    "General",
+                    "ICU",
+                    "Neurology",
+                    "Orthopedics"
+                ]
+            }
         },
         {
             "name": "visit_type",
             "type": "category",
-            "required": true
+            "required": true,
+            "constraints": {
+                "allowed_values": [
+                    "ER",
+                    "ICU",
+                    "OPD"
+                ]
+            }
         },
         {
             "name": "length_of_stay_hours",
             "type": "float32",
-            "required": true
+            "required": true,
+            "constraints": {
+                "min_value": 0.0,
+                "max_value": 720.0
+            }
         },
         {
             "name": "billed_amount",
             "type": "float32",
             "required": true,
             "constraints": {
-                "min_value": 0
+                "min_value": 0.0,
+                "max_value": 1000000.0
             }
         },
         {
@@ -67,7 +111,8 @@
             "type": "float32",
             "required": true,
             "constraints": {
-                "min_value": 0
+                "min_value": 0.0,
+                "max_value": 365.0
             }
         },
         {
@@ -75,13 +120,18 @@
             "type": "int8",
             "required": true,
             "constraints": {
-                "min_value": 1
+                "min_value": 1,
+                "max_value": 100
             }
         },
         {
             "name": "lag_time",
             "type": "int32",
-            "required": true
+            "required": true,
+            "constraints": {
+                "min_value": -365,
+                "max_value": 365
+            }
         }
     ]
 }

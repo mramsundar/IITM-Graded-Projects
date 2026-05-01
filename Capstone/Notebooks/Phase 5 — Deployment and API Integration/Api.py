@@ -29,10 +29,21 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Literal
 
+import sys
+
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
+
+# Validation module lives in Phase 6
+_PHASE6_DIR = (
+    Path(__file__).resolve().parent.parent
+    / "Phase 6 — Monitoring, Drift Detection, and Governance"
+)
+if str(_PHASE6_DIR) not in sys.path:
+    sys.path.insert(0, str(_PHASE6_DIR))
+from validate import validate_payload  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Logging setup
@@ -57,6 +68,10 @@ _MODEL_DIR = Path(__file__).resolve().parent.parent.parent / "Model Files"
 _PATIENT_RISK_PATH = _MODEL_DIR / "patient_risk_model.pkl"
 _CLAIM_OUTCOME_PATH = _MODEL_DIR / "claim_outcome_model.pkl"
 
+# Feature schemas (for validation)
+_PATIENT_RISK_SCHEMA_PATH = _MODEL_DIR / "patient_risk_model_feature_schema.json"
+_CLAIM_OUTCOME_SCHEMA_PATH = _MODEL_DIR / "claim_outcome_model_feature_schema.json"
+
 PATIENT_RISK_VERSION = "1.0"
 CLAIM_OUTCOME_VERSION = "1.0"
 
@@ -67,6 +82,7 @@ _RAW_DATA_DIR = Path(__file__).resolve().parent.parent.parent / "Raw Data"
 # ---------------------------------------------------------------------------
 _models: dict[str, Any] = {}
 _metadata: dict[str, list] = {}
+_schemas: dict[str, dict] = {}
 
 
 def _load_metadata() -> dict[str, list]:
@@ -140,6 +156,10 @@ async def lifespan(app: FastAPI):  # noqa: ARG001
 
     logger.info("Loading claim_outcome_model from %s", _CLAIM_OUTCOME_PATH)
     _models["claim_outcome"] = _load_model(_CLAIM_OUTCOME_PATH)
+
+    logger.info("Loading feature schemas for validation...")
+    _schemas["patient_risk"] = json.loads(_PATIENT_RISK_SCHEMA_PATH.read_text())
+    _schemas["claim_outcome"] = json.loads(_CLAIM_OUTCOME_SCHEMA_PATH.read_text())
 
     logger.info("Loading categorical metadata from raw CSVs...")
     _metadata.update(_load_metadata())
@@ -284,6 +304,11 @@ async def predict_patient_risk(request: PatientRiskRequest):
         raise HTTPException(status_code=503, detail="Patient risk model not loaded")
 
     features = request.model_dump()
+
+    is_valid, validation_errors = validate_payload(features, _schemas["patient_risk"])
+    if not is_valid:
+        raise HTTPException(status_code=422, detail={"validation_errors": validation_errors})
+
     df = pd.DataFrame([features])
     df["chronic_flag"] = df["chronic_flag"].astype("int8")
     df["visit_frequency"] = df["visit_frequency"].astype("int8")
@@ -330,6 +355,11 @@ async def predict_claim_outcome(request: ClaimOutcomeRequest):
         raise HTTPException(status_code=503, detail="Claim outcome model not loaded")
 
     features = request.model_dump()
+
+    is_valid, validation_errors = validate_payload(features, _schemas["claim_outcome"])
+    if not is_valid:
+        raise HTTPException(status_code=422, detail={"validation_errors": validation_errors})
+
     df = pd.DataFrame([features])
     df["age"] = df["age"].astype("int8")
     df["chronic_flag"] = df["chronic_flag"].astype("int8")

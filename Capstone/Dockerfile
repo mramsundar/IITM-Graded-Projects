@@ -39,6 +39,10 @@ COPY "Notebooks/Phase 5 — Deployment and API Integration/Api.py"     \
 COPY "Notebooks/Phase 5 — Deployment and API Integration/index.html" \
      "./Notebooks/Phase 5 — Deployment and API Integration/index.html"
 
+# validate.py is imported by Api.py at startup (sys.path insert to Phase 6 dir)
+COPY "Notebooks/Phase 6 — Monitoring, Drift Detection, and Governance/validate.py" \
+     "./Notebooks/Phase 6 — Monitoring, Drift Detection, and Governance/validate.py"
+
 # Pre-create the logs directory (the logger also creates it at startup,
 # but this ensures it exists even before the first request)
 RUN mkdir -p "./Notebooks/Phase 5 — Deployment and API Integration/logs"

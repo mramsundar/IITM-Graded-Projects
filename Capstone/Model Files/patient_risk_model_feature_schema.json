@@ -29,7 +29,8 @@
             "type": "int8",
             "required": true,
             "constraints": {
-                "min_value": 1
+                "min_value": 1,
+                "max_value": 100
             }
         }
     ]
