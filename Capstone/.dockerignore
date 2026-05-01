@@ -1,0 +1,32 @@
+# Notebooks and interim data — not needed at runtime
+Notebooks/Phase 1*
+Notebooks/Phase 2*
+Notebooks/Phase 3*
+Notebooks/Phase 4*
+Notebooks/Phase 6*
+Notebooks/Phase 7*
+Notebooks/Phase 5*/logs/
+
+# Raw data files not used by the API
+Raw Data/billing.csv
+
+# Misc project files
+Database/
+Docs/
+Data Quality Report/
+Notebook PDFs/
+*.drawio
+*.sql
+*.sh
+*.md
+
+# Python artefacts
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/

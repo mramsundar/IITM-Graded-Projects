@@ -8,3 +8,5 @@ pycaret>=3.0.0
 xgboost
 optuna
 shap
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0

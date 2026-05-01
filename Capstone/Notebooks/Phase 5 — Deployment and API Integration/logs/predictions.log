@@ -1,0 +1,89 @@
+2026-05-01 20:11:54,033  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:11:54,795  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:11:54,795  INFO      Both models loaded and ready.
+2026-05-01 20:11:58,737  INFO      Models unloaded.
+2026-05-01 20:11:59,165  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:11:59,917  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:11:59,918  INFO      Both models loaded and ready.
+2026-05-01 20:12:13,456  INFO      Models unloaded.
+2026-05-01 20:14:46,328  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:14:47,067  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:14:47,067  INFO      Both models loaded and ready.
+2026-05-01 20:15:29,112  INFO      Models unloaded.
+2026-05-01 20:15:29,553  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:15:30,321  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:15:30,321  INFO      Both models loaded and ready.
+2026-05-01 20:15:36,787  INFO      Models unloaded.
+2026-05-01 20:15:37,204  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:15:37,939  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:15:37,939  INFO      Both models loaded and ready.
+2026-05-01 20:18:00,976  INFO      Models unloaded.
+2026-05-01 20:18:01,400  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:18:02,445  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:18:02,452  INFO      Both models loaded and ready.
+2026-05-01 20:18:14,478  INFO      Models unloaded.
+2026-05-01 20:18:14,937  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:18:16,012  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:18:16,019  INFO      Both models loaded and ready.
+2026-05-01 20:18:18,796  INFO      PREDICTION | id=56fc596d-3f25-4d86-9131-0ff84bb9f30f | model=patient_risk_model v1.0 | ts=2026-05-01T14:48:18.796775+00:00 | hash=aecbd702a18fcbdac8a02551be153304a03d18c1c5083036f7f95d96b14eb32e | label=Medium | score=0.3521
+2026-05-01 20:18:23,914  INFO      PREDICTION | id=fda3d0d2-e028-46b9-bce4-926ab4071c61 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:48:23.914028+00:00 | hash=9b9f9a102aabc4baf8bc097a77606b8e57e9f8a6ece0b3f9fcb062959da447f7 | label=Pending | score=0.6030
+2026-05-01 20:19:10,906  INFO      PREDICTION | id=53ecc19e-60d8-4923-9eed-68dc149d9a50 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:49:10.906807+00:00 | hash=51d5f0643f05020ea70b6eda9b631a05e70e45b50f863e734fb29c2f527f2d1f | label=Pending | score=0.6030
+2026-05-01 20:22:27,418  INFO      Models unloaded.
+2026-05-01 20:22:27,824  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:22:28,893  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:22:28,899  INFO      Loading categorical metadata from raw CSVs...
+2026-05-01 20:22:28,913  INFO      Metadata loaded: {'city': 6, 'insurance_provider': 4, 'department': 6, 'visit_type': 3}
+2026-05-01 20:22:28,913  INFO      Both models loaded and ready.
+2026-05-01 20:22:33,056  INFO      Models unloaded.
+2026-05-01 20:22:33,454  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:22:34,493  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:22:34,500  INFO      Loading categorical metadata from raw CSVs...
+2026-05-01 20:22:34,512  INFO      Metadata loaded: {'city': 6, 'insurance_provider': 4, 'department': 6, 'visit_type': 3}
+2026-05-01 20:22:34,512  INFO      Both models loaded and ready.
+2026-05-01 20:23:16,440  INFO      Models unloaded.
+2026-05-01 20:23:16,855  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-01 20:23:17,893  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-01 20:23:17,900  INFO      Loading categorical metadata from raw CSVs...
+2026-05-01 20:23:17,912  INFO      Metadata loaded: {'city': 6, 'insurance_provider': 4, 'department': 6, 'visit_type': 3}
+2026-05-01 20:23:17,912  INFO      Both models loaded and ready.
+2026-05-01 20:23:25,054  INFO      PREDICTION | id=d0490d4a-f377-484a-be2f-72420268037f | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:25.054208+00:00 | hash=cdda53b0b6662db8b1638fbc29449c9174e24dd9ded7c6b0d719574a151240a6 | label=Pending | score=0.6030
+2026-05-01 20:23:28,200  INFO      PREDICTION | id=bcd1303d-8243-4eac-af95-37f88b743b17 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:28.200708+00:00 | hash=e07454ba7bc44863eee99ec5d5927c90eb1d194d7db743873ac3e93109663233 | label=Pending | score=0.6117
+2026-05-01 20:23:31,027  INFO      PREDICTION | id=84c459bb-270e-45a1-9f6e-0d5b430628b7 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:31.027373+00:00 | hash=266cbb9caa70319be08ec7493c957943c33e589b8ae8f413ef2d474d0a05f13d | label=Pending | score=0.6117
+2026-05-01 20:23:31,943  INFO      PREDICTION | id=10ea66ff-4baf-421e-8e45-e2b173aae97f | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:31.943781+00:00 | hash=266cbb9caa70319be08ec7493c957943c33e589b8ae8f413ef2d474d0a05f13d | label=Pending | score=0.6117
+2026-05-01 20:23:32,962  INFO      PREDICTION | id=619a82e7-f3e4-49a3-bd39-bf149f91b4e0 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:32.962131+00:00 | hash=266cbb9caa70319be08ec7493c957943c33e589b8ae8f413ef2d474d0a05f13d | label=Pending | score=0.6117
+2026-05-01 20:23:39,916  INFO      PREDICTION | id=3ab4bc23-822e-4d91-9e27-eae1627cb3cd | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:39.916686+00:00 | hash=e299c9af5857a70644be290c907e729776ab6b91a67e333fc1d48acfa84d6eec | label=Pending | score=0.6263
+2026-05-01 20:23:42,922  INFO      PREDICTION | id=c10ddf34-9944-4ff7-9c93-e78c806085d5 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:42.922360+00:00 | hash=1d0944578de4716e4afaf018f9bf21efdfab5267512a425ec0e6eb68f7775c1a | label=Pending | score=0.5847
+2026-05-01 20:23:44,857  INFO      PREDICTION | id=56484a94-926e-4598-b0df-0568a4b8e5ff | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:44.857728+00:00 | hash=d0446bb8d4a5e3de8f8f2ae2c4f2f83f51a0958ae9ac34bba7c4eb153318a3e9 | label=Pending | score=0.5847
+2026-05-01 20:23:49,148  INFO      PREDICTION | id=19c80946-e807-475a-867e-aae39efe2cb9 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:49.148015+00:00 | hash=f099c90df9fc655d3084837accd8ffd261afd68e397bbac660c9d6410ee56272 | label=Pending | score=0.6623
+2026-05-01 20:23:53,798  INFO      PREDICTION | id=263e1c76-1bd9-42a4-b92d-f96ef15029f2 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:53:53.798280+00:00 | hash=8c3a59aaffd533c887639dab4081c2f18b46f2342684ee8361d05768974960f3 | label=Pending | score=0.7218
+2026-05-01 20:24:00,528  INFO      PREDICTION | id=d6c57a01-56b3-41f4-8e8b-0694796a426d | model=claim_outcome_model v1.0 | ts=2026-05-01T14:54:00.528224+00:00 | hash=79c60cedc7ccb8a8705347d7ce4499a693df932b426a64b370903c5d7fe063de | label=Pending | score=0.7336
+2026-05-01 20:24:04,061  INFO      PREDICTION | id=991c7043-a4a8-4ef3-9e2c-0c5713ed9c95 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:54:04.061399+00:00 | hash=f37494ab00628d0f37bda2fe28710205968625f93ec9ebe3d2e5c7b8493acfea | label=Pending | score=0.7336
+2026-05-01 20:24:06,113  INFO      PREDICTION | id=1bfbda0f-8e7f-43d5-9316-66b389ada691 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:54:06.113176+00:00 | hash=7844ba100413d50ef55ba47e26c3ab4132ed66d4e467bcf91fbdef0a52a31f3a | label=Pending | score=0.6609
+2026-05-01 20:24:07,836  INFO      PREDICTION | id=4cd53bd4-b088-4acf-afe6-cc3bb83d4cc0 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:54:07.836864+00:00 | hash=89a830767787bfd924c065ac134041036fc0bb57f8bb226030bde4a84c8dfb1a | label=Pending | score=0.7157
+2026-05-01 20:24:08,997  INFO      PREDICTION | id=11029a56-435a-4f31-aa91-4f6ac8781660 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:54:08.997038+00:00 | hash=2a5ebcc8cf2219a5a1fc7449d9aee923591eb847077eb90a9b600d6f3a7a7596 | label=Pending | score=0.6945
+2026-05-01 20:24:11,363  INFO      PREDICTION | id=2a6d8743-aa13-46cc-8fc9-62c7051ed62e | model=claim_outcome_model v1.0 | ts=2026-05-01T14:54:11.363271+00:00 | hash=8e279390df3a59fda99545edec785fd588f0b52862c504d28a2a8acf1e1b84f3 | label=Pending | score=0.4029
+2026-05-01 20:24:15,833  INFO      PREDICTION | id=5e02ce3b-5fbc-4bc3-a324-278cf4edb9dc | model=claim_outcome_model v1.0 | ts=2026-05-01T14:54:15.833210+00:00 | hash=8e279390df3a59fda99545edec785fd588f0b52862c504d28a2a8acf1e1b84f3 | label=Pending | score=0.4029
+2026-05-01 20:24:17,902  INFO      PREDICTION | id=355179fb-e812-4a91-ab95-4e94bf646aa3 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:54:17.902013+00:00 | hash=85ad50a07e2379803d2a24dc5e42e3f418d0d819c5ba20e02c50084b55f9f762 | label=Rejected | score=0.5533
+2026-05-01 20:24:22,246  INFO      PREDICTION | id=6258de2c-9912-4b80-94d5-0404e2298bb9 | model=patient_risk_model v1.0 | ts=2026-05-01T14:54:22.246387+00:00 | hash=aecbd702a18fcbdac8a02551be153304a03d18c1c5083036f7f95d96b14eb32e | label=Medium | score=0.3521
+2026-05-01 20:24:25,892  INFO      PREDICTION | id=730a2b50-c41e-43c8-9f02-11eaec178801 | model=patient_risk_model v1.0 | ts=2026-05-01T14:54:25.892398+00:00 | hash=e798d456dd1be4d8df9a6dcf5fea2e6e7a603e2c46c36df0e4b65160186aa644 | label=Low | score=0.4159
+2026-05-01 20:24:31,739  INFO      PREDICTION | id=b70376c4-586c-46a9-b62b-3f5b4f75213c | model=patient_risk_model v1.0 | ts=2026-05-01T14:54:31.739347+00:00 | hash=c8565ac615c03dac41b48545cb59be2694321b32fdf43bfb177443c524fffea0 | label=Low | score=0.3974
+2026-05-01 20:24:36,200  INFO      PREDICTION | id=66a88cd0-43e9-4a1e-8e7c-b313e1f1f93a | model=patient_risk_model v1.0 | ts=2026-05-01T14:54:36.200745+00:00 | hash=8183cde89e61dfba963c7c2e7e1d110ce6b7e74056d28ea37369db1be8a423c9 | label=High | score=0.4305
+2026-05-01 20:24:40,835  INFO      PREDICTION | id=978d2477-03ba-42f8-9aa6-74cd7bb44551 | model=patient_risk_model v1.0 | ts=2026-05-01T14:54:40.835888+00:00 | hash=c8565ac615c03dac41b48545cb59be2694321b32fdf43bfb177443c524fffea0 | label=Low | score=0.3974
+2026-05-01 20:25:27,877  INFO      PREDICTION | id=084a344b-988a-4d2c-830d-f163e9306a3e | model=patient_risk_model v1.0 | ts=2026-05-01T14:55:27.877904+00:00 | hash=8183cde89e61dfba963c7c2e7e1d110ce6b7e74056d28ea37369db1be8a423c9 | label=High | score=0.4305
+2026-05-01 20:25:32,599  INFO      PREDICTION | id=e2fd3c00-96db-4e93-869e-e93ae17f5dc4 | model=patient_risk_model v1.0 | ts=2026-05-01T14:55:32.599174+00:00 | hash=df1cb90a0932ac53fa987d110043623160a920e4ff620479f5acd265c32aed54 | label=Medium | score=0.3428
+2026-05-01 20:25:35,675  INFO      PREDICTION | id=3915212c-f5cd-4fa8-aa7c-994817ac79e4 | model=patient_risk_model v1.0 | ts=2026-05-01T14:55:35.675292+00:00 | hash=bb3fa86582daafe9f27a9f5620242c7840ce434f0aca02d89186e6384b08f827 | label=High | score=0.3770
+2026-05-01 20:25:40,301  INFO      PREDICTION | id=d4b21fcc-1f77-43ff-b5a5-b1dc351716fb | model=patient_risk_model v1.0 | ts=2026-05-01T14:55:40.301108+00:00 | hash=75beb83754e8cef7ed43f610f0e4d783a2035f9196316d946fc66e0c57e8979c | label=High | score=0.3376
+2026-05-01 20:25:42,737  INFO      PREDICTION | id=e74f62f8-0ef1-485e-9dd3-41f7705a535f | model=patient_risk_model v1.0 | ts=2026-05-01T14:55:42.737360+00:00 | hash=fd81c2a52c93f44e3e101a46354fa0ebf1f3862b4cae859590692022eefd48c2 | label=Medium | score=0.3711
+2026-05-01 20:27:04,431  INFO      PREDICTION | id=c299f2e4-7f96-41e6-ad02-dbb46bec4b9f | model=patient_risk_model v1.0 | ts=2026-05-01T14:57:04.431841+00:00 | hash=aecbd702a18fcbdac8a02551be153304a03d18c1c5083036f7f95d96b14eb32e | label=Medium | score=0.3521
+2026-05-01 20:27:05,617  INFO      PREDICTION | id=21097c94-247a-4f69-9286-fd8d0ae0f644 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:57:05.617399+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030
+2026-05-01 20:27:12,246  INFO      PREDICTION | id=3b667642-adf4-4795-80d1-54765fa94d6b | model=claim_outcome_model v1.0 | ts=2026-05-01T14:57:12.246581+00:00 | hash=e23d439f6ee6b5e82d140ff720decd5954a611189426c193f8f24f38c829f5e4 | label=Pending | score=0.5719
+2026-05-01 20:27:15,224  INFO      PREDICTION | id=fb0be569-1255-45f8-860d-3db1ae1f2cb3 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:57:15.224497+00:00 | hash=d078040d2b82da8e0f1ad058e9cef01ceae0b1817edc27d450fcbebe111f3e63 | label=Pending | score=0.5719
+2026-05-01 20:27:17,450  INFO      PREDICTION | id=d017562a-c464-4e9a-b400-4fa90ddf2ba0 | model=claim_outcome_model v1.0 | ts=2026-05-01T14:57:17.450834+00:00 | hash=33fbb9db052bca556405c27e8df366adf567f293e19de19e1e9e0103ef956440 | label=Pending | score=0.5719
+2026-05-01 20:27:22,437  INFO      PREDICTION | id=0a5958fb-ef53-43b3-92cb-54502710b95d | model=claim_outcome_model v1.0 | ts=2026-05-01T14:57:22.437545+00:00 | hash=6d45d5d63f3d976ff832032b35a5e346a055fdedd92680a49ab9586a8438d4f5 | label=Pending | score=0.5750
+2026-05-01 20:34:35,933  INFO      PREDICTION | id=6f1fffcf-64a2-4ea2-bb3c-82641f5c2c79 | model=patient_risk_model v1.0 | ts=2026-05-01T15:04:35.933209+00:00 | hash=aecbd702a18fcbdac8a02551be153304a03d18c1c5083036f7f95d96b14eb32e | label=Medium | score=0.3521
+2026-05-01 20:34:39,084  INFO      PREDICTION | id=bb7c0dd3-7b40-4f5a-b684-f0493ce4b89d | model=claim_outcome_model v1.0 | ts=2026-05-01T15:04:39.084165+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030
+2026-05-01 20:34:40,033  INFO      PREDICTION | id=c1e9c400-e057-4798-b8e9-079714b7cd4e | model=claim_outcome_model v1.0 | ts=2026-05-01T15:04:40.033340+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030
+2026-05-01 20:37:30,080  INFO      PREDICTION | id=b05d935a-8733-44c6-8c04-44becce5d0c4 | model=patient_risk_model v1.0 | ts=2026-05-01T15:07:30.080771+00:00 | hash=aecbd702a18fcbdac8a02551be153304a03d18c1c5083036f7f95d96b14eb32e | label=Medium | score=0.3521
+2026-05-01 20:37:31,488  INFO      PREDICTION | id=051cf458-afe7-4c77-8ccc-90a72b1dec5c | model=claim_outcome_model v1.0 | ts=2026-05-01T15:07:31.488289+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030
+2026-05-01 20:37:38,286  INFO      PREDICTION | id=81f44870-7578-4ffd-9b34-27aea9969a71 | model=claim_outcome_model v1.0 | ts=2026-05-01T15:07:38.286455+00:00 | hash=50207bd27bb8974ea3b9c29940ccd83653c828973ee301c4e2eae30e1e03926b | label=Pending | score=0.7683
+2026-05-01 20:37:42,041  INFO      PREDICTION | id=cb641b72-7b19-40ff-bf2c-a6fa5c5ca5c8 | model=claim_outcome_model v1.0 | ts=2026-05-01T15:07:42.041129+00:00 | hash=5ac97ba7b4dfd1718b4d488b1bc63009ee58c8e4c2a2b5dc2b68424751e00019 | label=Paid | score=0.6291

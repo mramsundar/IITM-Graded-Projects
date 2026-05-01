@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare ML API — Testing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <style>
+    body { background: #f0f2f5; }
+    .card { box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+    pre { white-space: pre-wrap; word-break: break-word; }
+    .badge-Low    { background-color: #198754; }
+    .badge-Medium { background-color: #ffc107; color: #000; }
+    .badge-High   { background-color: #dc3545; }
+    .badge-Paid     { background-color: #198754; }
+    .badge-Pending  { background-color: #ffc107; color: #000; }
+    .badge-Rejected { background-color: #dc3545; }
+  </style>
+</head>
+<body>
+<div class="container py-4">
+
+  <h2 class="mb-1 fw-bold">Healthcare ML Prediction API</h2>
+  <p class="text-muted mb-4">Quick testing interface — server must be running on <code>http://127.0.0.1:8000</code></p>
+
+  <!-- Health row -->
+  <div class="card mb-4">
+    <div class="card-header fw-semibold text-secondary">Service Health</div>
+    <div class="card-body">
+      <div class="d-flex flex-wrap gap-2">
+        <button class="btn btn-outline-secondary" onclick="checkHealth('/health')">Check All</button>
+        <button class="btn btn-outline-secondary" onclick="checkHealth('/health/patient-risk')">Patient Risk</button>
+        <button class="btn btn-outline-secondary" onclick="checkHealth('/health/claim-outcome')">Claim Outcome</button>
+      </div>
+      <div id="healthResult" style="display:none" class="mt-3">
+        <div class="alert mb-0" id="healthAlert"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Patient Risk -->
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-header bg-primary text-white fw-semibold">Patient Risk Prediction</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-select" id="pr_gender">
+              <option value="M">M</option>
+              <option value="F">F</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Chronic Flag</label>
+            <select class="form-select" id="pr_chronic_flag">
+              <option value="0">0 — No chronic condition</option>
+              <option value="1">1 — Chronic condition present</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Visit Frequency</label>
+            <input type="number" class="form-control" id="pr_visit_frequency" value="1" min="1" />
+          </div>
+          <button class="btn btn-primary w-100" onclick="predictRisk()">Predict Risk</button>
+        </div>
+        <div class="card-footer" id="pr_result" style="display:none">
+          <div id="pr_badge" class="mb-2"></div>
+          <pre class="bg-light p-2 rounded small mb-0" id="pr_json"></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Claim Outcome -->
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-header bg-success text-white fw-semibold">Claim Outcome Prediction</div>
+        <div class="card-body">
+          <div class="row g-2">
+            <div class="col-6">
+              <label class="form-label">Age</label>
+              <input type="number" class="form-control" id="co_age" value="45" />
+            </div>
+            <div class="col-6">
+              <label class="form-label">Gender</label>
+              <select class="form-select" id="co_gender">
+                <option value="M">M</option>
+                <option value="F">F</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">City</label>
+              <select class="form-select" id="co_city"></select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Insurance Provider</label>
+              <select class="form-select" id="co_insurance_provider"></select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Chronic Flag</label>
+              <select class="form-select" id="co_chronic_flag">
+                <option value="0">0 — None</option>
+                <option value="1">1 — Present</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Department</label>
+              <select class="form-select" id="co_department"></select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Visit Type</label>
+              <select class="form-select" id="co_visit_type"></select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Length of Stay (hrs)</label>
+              <input type="number" step="0.1" class="form-control" id="co_length_of_stay_hours" value="12.5" />
+            </div>
+            <div class="col-6">
+              <label class="form-label">Billed Amount</label>
+              <input type="number" step="0.01" class="form-control" id="co_billed_amount" value="15000" />
+            </div>
+            <div class="col-6">
+              <label class="form-label">Payment Days</label>
+              <input type="number" step="0.1" class="form-control" id="co_payment_days" value="30" />
+            </div>
+            <div class="col-6">
+              <label class="form-label">Visit Frequency</label>
+              <input type="number" class="form-control" id="co_visit_frequency" value="3" min="1" />
+            </div>
+            <div class="col-6">
+              <label class="form-label">Lag Time (days)</label>
+              <input type="number" class="form-control" id="co_lag_time" value="5" />
+            </div>
+          </div>
+          <button class="btn btn-success w-100 mt-3" onclick="predictClaim()">Predict Claim Outcome</button>
+        </div>
+        <div class="card-footer" id="co_result" style="display:none">
+          <div id="co_badge" class="mb-2"></div>
+          <pre class="bg-light p-2 rounded small mb-0" id="co_json"></pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JSON Inspector -->
+  <div class="card mt-4" id="inspector" style="display:none">
+    <div class="card-header fw-semibold text-secondary">Request JSON Inspector</div>
+    <div class="card-body">
+      <div class="row g-4">
+
+        <!-- Patient Risk -->
+        <div class="col-md-6" id="inspector_pr" style="display:none">
+          <h6 class="fw-semibold text-primary mb-2">Patient Risk — Request</h6>
+          <pre class="bg-light border rounded p-2 small mb-0" id="inspector_pr_req"></pre>
+        </div>
+
+        <!-- Claim Outcome -->
+        <div class="col-md-6" id="inspector_co" style="display:none">
+          <h6 class="fw-semibold text-success mb-2">Claim Outcome — Request</h6>
+          <pre class="bg-light border rounded p-2 small mb-0" id="inspector_co_req"></pre>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const BASE = "http://127.0.0.1:8000";
+
+  async function loadMetadata() {
+    try {
+      const res = await fetch(BASE + "/metadata/claim-outcome");
+      const data = await res.json();
+      ["city", "insurance_provider", "department", "visit_type"].forEach(field => {
+        const sel = document.getElementById("co_" + field);
+        (data[field] || []).forEach(val => {
+          const opt = document.createElement("option");
+          opt.value = val;
+          opt.textContent = val;
+          sel.appendChild(opt);
+        });
+      });
+    } catch (e) {
+      console.warn("Could not load metadata:", e.message);
+    }
+  }
+
+  loadMetadata();
+
+  function labelBadge(label) {
+    return `<span class="badge badge-${label} fs-6 px-3 py-2">${label}</span>`;
+  }
+
+  async function checkHealth(path) {
+    const el = document.getElementById("healthResult");
+    const alert = document.getElementById("healthAlert");
+    try {
+      const res = await fetch(BASE + path);
+      const data = await res.json();
+      el.style.display = "block";
+      alert.className = res.ok ? "alert alert-success mb-0" : "alert alert-warning mb-0";
+      alert.textContent = JSON.stringify(data, null, 2);
+    } catch (e) {
+      el.style.display = "block";
+      alert.className = "alert alert-danger mb-0";
+      alert.textContent = "Could not reach server: " + e.message;
+    }
+  }
+
+  async function predictRisk() {
+    const payload = {
+      gender: document.getElementById("pr_gender").value,
+      chronic_flag: parseInt(document.getElementById("pr_chronic_flag").value),
+      visit_frequency: parseInt(document.getElementById("pr_visit_frequency").value),
+    };
+    await callPredict("/predict/patient-risk", payload, "pr");
+  }
+
+  async function predictClaim() {
+    const payload = {
+      age: parseInt(document.getElementById("co_age").value),
+      gender: document.getElementById("co_gender").value,
+      city: document.getElementById("co_city").value,
+      insurance_provider: document.getElementById("co_insurance_provider").value,
+      chronic_flag: parseInt(document.getElementById("co_chronic_flag").value),
+      department: document.getElementById("co_department").value,
+      visit_type: document.getElementById("co_visit_type").value,
+      length_of_stay_hours: parseFloat(document.getElementById("co_length_of_stay_hours").value),
+      billed_amount: parseFloat(document.getElementById("co_billed_amount").value),
+      payment_days: parseFloat(document.getElementById("co_payment_days").value),
+      visit_frequency: parseInt(document.getElementById("co_visit_frequency").value),
+      lag_time: parseInt(document.getElementById("co_lag_time").value),
+    };
+    await callPredict("/predict/claim-outcome", payload, "co");
+  }
+
+  async function callPredict(path, payload, prefix) {
+    const resultEl = document.getElementById(prefix + "_result");
+    const badgeEl  = document.getElementById(prefix + "_badge");
+    const jsonEl   = document.getElementById(prefix + "_json");
+
+    // Inspector elements
+    const inspectorEl    = document.getElementById("inspector");
+    const inspectorPanel = document.getElementById("inspector_" + prefix);
+    const reqEl          = document.getElementById("inspector_" + prefix + "_req");
+
+    reqEl.textContent = JSON.stringify(payload, null, 2);
+    inspectorEl.style.display = "block";
+    inspectorPanel.style.display = "block";
+
+    try {
+      const res  = await fetch(BASE + path, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      resultEl.style.display = "block";
+      if (res.ok) {
+        badgeEl.innerHTML = labelBadge(data.prediction) +
+          ` <small class="text-muted ms-2">confidence: ${(data.confidence * 100).toFixed(1)}%</small>`;
+        jsonEl.textContent = JSON.stringify(data, null, 2);
+        resultEl.className = "card-footer";
+      } else {
+        badgeEl.innerHTML = `<span class="badge bg-danger">Error ${res.status}</span>`;
+        jsonEl.textContent = JSON.stringify(data, null, 2);
+        resultEl.className = "card-footer bg-danger-subtle";
+      }
+    } catch (e) {
+      resultEl.style.display = "block";
+      badgeEl.innerHTML = `<span class="badge bg-danger">Network Error</span>`;
+      jsonEl.textContent = e.message;
+      resultEl.className = "card-footer bg-danger-subtle";
+    }
+  }
+</script>
+</body>
+</html>
