@@ -1,0 +1,36 @@
+{
+    "version": "1.0",
+    "target": "risk_score",
+    "features": [
+        {
+            "name": "chronic_flag",
+            "type": "int8",
+            "required": true,
+            "constraints": {
+                "allowed_values": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "gender",
+            "type": "category",
+            "required": true,
+            "constraints": {
+                "allowed_values": [
+                    "M",
+                    "F"
+                ]
+            }
+        },
+        {
+            "name": "visit_frequency",
+            "type": "int8",
+            "required": true,
+            "constraints": {
+                "min_value": 1
+            }
+        }
+    ]
+}
