@@ -1,6 +1,9 @@
 pandas
 numpy
 matplotlib
-scikit-learn
+scikit-learn>=1.0.2
 fg-data-profiling
 ipywidgets
+pycaret>=3.0.0
+xgboost
+optuna
