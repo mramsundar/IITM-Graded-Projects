@@ -7,3 +7,4 @@ ipywidgets
 pycaret>=3.0.0
 xgboost
 optuna
+shap
