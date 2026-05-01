@@ -1,0 +1,87 @@
+{
+    "version": "1.0",
+    "target": "claim_status",
+    "features": [
+        {
+            "name": "age",
+            "type": "int8",
+            "required": true
+        },
+        {
+            "name": "gender",
+            "type": "category",
+            "required": true,
+            "constraints": {
+                "allowed_values": [
+                    "M",
+                    "F"
+                ]
+            }
+        },
+        {
+            "name": "city",
+            "type": "category",
+            "required": true
+        },
+        {
+            "name": "insurance_provider",
+            "type": "category",
+            "required": true
+        },
+        {
+            "name": "chronic_flag",
+            "type": "int8",
+            "required": true,
+            "constraints": {
+                "allowed_values": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "department",
+            "type": "category",
+            "required": true
+        },
+        {
+            "name": "visit_type",
+            "type": "category",
+            "required": true
+        },
+        {
+            "name": "length_of_stay_hours",
+            "type": "float32",
+            "required": true
+        },
+        {
+            "name": "billed_amount",
+            "type": "float32",
+            "required": true,
+            "constraints": {
+                "min_value": 0
+            }
+        },
+        {
+            "name": "payment_days",
+            "type": "float32",
+            "required": true,
+            "constraints": {
+                "min_value": 0
+            }
+        },
+        {
+            "name": "visit_frequency",
+            "type": "int8",
+            "required": true,
+            "constraints": {
+                "min_value": 1
+            }
+        },
+        {
+            "name": "lag_time",
+            "type": "int32",
+            "required": true
+        }
+    ]
+}
