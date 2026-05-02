@@ -98,3 +98,20 @@
 2026-05-01 21:01:04,001  INFO      PREDICTION | id=a3654b8d-9560-4cae-ae9f-6c13109cf565 | model=claim_outcome_model v1.0 | ts=2026-05-01T15:31:04.001613+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030
 2026-05-01 21:03:35,201  INFO      PREDICTION | id=301a0798-a98c-4ad3-83c0-bf7498277ea7 | model=patient_risk_model v1.0 | ts=2026-05-01T15:33:35.201891+00:00 | hash=aecbd702a18fcbdac8a02551be153304a03d18c1c5083036f7f95d96b14eb32e | label=Medium | score=0.3521
 2026-05-01 21:03:37,188  INFO      PREDICTION | id=0b2893fc-a67c-450d-bc65-1a3ad62e6e9e | model=claim_outcome_model v1.0 | ts=2026-05-01T15:33:37.188172+00:00 | hash=4725f7104ef5fadcf94aebe5ab82c2caba85e93cb94a9fa0a565042debc4a806 | label=Pending | score=0.6030
+2026-05-02 09:43:45,611  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-02 09:43:47,793  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-02 09:43:47,805  INFO      Loading feature schemas for validation...
+2026-05-02 09:43:47,806  INFO      Loading categorical metadata from raw CSVs...
+2026-05-02 09:43:47,823  INFO      Metadata loaded: {'city': 6, 'insurance_provider': 4, 'department': 6, 'visit_type': 3}
+2026-05-02 09:43:47,823  INFO      Both models loaded and ready.
+2026-05-02 10:02:56,899  INFO      Models unloaded.
+2026-05-02 10:04:55,693  INFO      Loading patient_risk_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/patient_risk_model.pkl
+2026-05-02 10:04:57,365  INFO      Loading claim_outcome_model from /Users/ramsundar/Documents/IITM-Graded-Projects/Capstone/Model Files/claim_outcome_model.pkl
+2026-05-02 10:04:57,377  INFO      Loading feature schemas for validation...
+2026-05-02 10:04:57,377  INFO      Loading categorical metadata from raw CSVs...
+2026-05-02 10:04:57,394  INFO      Metadata loaded: {'city': 6, 'insurance_provider': 4, 'department': 6, 'visit_type': 3}
+2026-05-02 10:04:57,394  INFO      Both models loaded and ready.
+2026-05-02 10:05:14,186  INFO      PREDICTION | id=301695f9-b40a-45f2-a010-d23873f402b2 | model=patient_risk_model v1.0 | ts=2026-05-02T04:35:14.186855+00:00 | hash=8ed4fcb4226d05a17313c38f4be2de2985457a91f171b196bf08e7e2b4c28103 | label=High | score=0.4305
+2026-05-02 10:05:32,522  INFO      PREDICTION | id=58f6f7ff-4299-440c-aff2-643ffc7971f5 | model=patient_risk_model v1.0 | ts=2026-05-02T04:35:32.522229+00:00 | hash=cdbc34925f0ca411c5157b6c7961ea8f5a93c9fa51b6e3d740c87879cf7d0654 | label=Low | score=0.3974
+2026-05-02 10:07:34,944  INFO      PREDICTION | id=292e3652-a319-4b4a-89b9-dfeeff005fb6 | model=claim_outcome_model v1.0 | ts=2026-05-02T04:37:34.944078+00:00 | hash=439780ca542ec029674b5e95fb84c6abb9f2d773167f8dbe19d1593b285529c5 | label=Paid | score=0.5334
+2026-05-02 10:08:00,832  INFO      PREDICTION | id=a53b58b0-ccbc-4a0d-b34d-79dc9a593a12 | model=patient_risk_model v1.0 | ts=2026-05-02T04:38:00.832601+00:00 | hash=80e0c9cf2e6db11fb4eb45a9b5fe66a2062104af783c74323d1ee36468020082 | label=High | score=0.3873
